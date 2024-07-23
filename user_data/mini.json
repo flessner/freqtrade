@@ -1,0 +1,70 @@
+{
+  "max_open_trades": 1,
+  "stake_currency": "USDT",
+  "stake_amount": 500,
+  "tradable_balance_ratio": 0.99,
+  "fiat_display_currency": "USD",
+  "dry_run": false,
+  "dry_run_wallet": 600,
+  "cancel_open_orders_on_exit": false,
+  "trading_mode": "futures",
+  "margin_mode": "isolated",
+  "unfilledtimeout": {
+    "entry": 10,
+    "exit": 10,
+    "exit_timeout_count": 0,
+    "unit": "minutes"
+  },
+  "entry_pricing": {
+    "price_side": "other",
+    "use_order_book": true,
+    "order_book_top": 1
+  },
+  "exit_pricing": {
+    "price_side": "other",
+    "use_order_book": true,
+    "order_book_top": 1
+  },
+  "exchange": {
+    "name": "bybit",
+    "key": "",
+    "secret": "",
+    "pair_whitelist": [
+      "BTC/USDT:USDT",
+      "ETH/USDT:USDT",
+      "BCH/USDT:USDT",
+      "LTC/USDT:USDT",
+      "DOT/USDT:USDT",
+      "LINK/USDT:USDT",
+      "BNB/USDT:USDT",
+      "XRP/USDT:USDT",
+      "ADA/USDT:USDT",
+      "MATIC/USDT:USDT"
+    ],
+    "pair_blacklist": []
+  },
+  "cctx_config": {
+    "enableRateLimit": true,
+    "options": {
+      "options": {
+        "adjustForTimeDifference": true
+      }
+    }
+  },
+  "pairlists": [
+    {
+      "method": "StaticPairList"
+    }
+  ],
+  "telegram": {
+    "enabled": true,
+    "token": "",
+    "chat_id": ""
+  },
+  "bot_name": "mini",
+  "initial_state": "running",
+  "force_entry_enable": false,
+  "internals": {
+    "process_throttle_secs": 5
+  }
+}

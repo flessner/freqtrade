@@ -1,0 +1,7 @@
+services:
+  freqtrade:
+    image: freqtradeorg/freqtrade:stable
+    restart: no
+    mem_limit: 24G
+    volumes:
+      - "./user_data:/freqtrade/user_data"

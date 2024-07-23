@@ -1,0 +1,15 @@
+# editor
+/.vscode
+
+# macos
+.DS_Store
+
+# freqtrade
+/user_data/data
+/user_data/logs/*.log
+/user_data/backtest_results
+/user_data/hyperopt_results
+/user_data/plot
+/user_data/*.sqlite
+/user_data/*.sqlite-shm
+/user_data/*.sqlite-wal
