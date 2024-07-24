@@ -26,7 +26,7 @@ class NFI5MO(IStrategy):
     }
 
     # Stoploss:
-    stoploss = -0.025
+    stoploss = -0.01
 
     # Trailing stop:
     trailing_stop = False
@@ -34,58 +34,163 @@ class NFI5MO(IStrategy):
     # trailing_stop_positive_offset = 0.263
     # trailing_only_offset_is_reached = True
 
+    # Buy hyperspace params:
     buy_params = {
-        #############
-        # Enable/Disable conditions
-        "buy_condition_1_enable": True,
-        "buy_condition_2_enable": True,
-        "buy_condition_3_enable": True,
-        "buy_condition_4_enable": True,
-        "buy_condition_5_enable": True,
-        "buy_condition_6_enable": True,
-        "buy_condition_7_enable": True,
-        "buy_condition_8_enable": True,
-        "buy_condition_9_enable": True,
-        "buy_condition_10_enable": True,
-        "buy_condition_11_enable": True,
+        "base_nb_candles_buy": 32,
+        "buy_bb20_close_bblowerband_4": 0.964,
+        "buy_bb20_volume_4": 17.42,
+        "buy_bb40_bbdelta_close_3": 0.025,
+        "buy_bb40_closedelta_close_3": 0.025,
+        "buy_bb40_tail_bbdelta_3": 0.228,
+        "buy_bb_offset_10": 0.971,
+        "buy_bb_offset_14": 0.987,
+        "buy_bb_offset_18": 0.986,
+        "buy_bb_offset_2": 0.991,
+        "buy_bb_offset_5": 0.999,
+        "buy_bb_offset_6": 0.999,
+        "buy_bb_offset_9": 0.978,
+        "buy_chop_min_19": 43.3,
+        "buy_condition_10_enable": False,
+        "buy_condition_11_enable": False,
         "buy_condition_12_enable": True,
         "buy_condition_13_enable": True,
         "buy_condition_14_enable": True,
-        "buy_condition_15_enable": True,
-        "buy_condition_16_enable": True,
+        "buy_condition_15_enable": False,
+        "buy_condition_16_enable": False,
         "buy_condition_17_enable": True,
-        "buy_condition_18_enable": True,
-        "buy_condition_19_enable": True,
-        "buy_condition_20_enable": True,
-        "buy_condition_21_enable": True,
-        #############
+        "buy_condition_18_enable": False,
+        "buy_condition_19_enable": False,
+        "buy_condition_1_enable": True,
+        "buy_condition_20_enable": False,
+        "buy_condition_21_enable": False,
+        "buy_condition_2_enable": True,
+        "buy_condition_3_enable": False,
+        "buy_condition_4_enable": False,
+        "buy_condition_5_enable": False,
+        "buy_condition_6_enable": False,
+        "buy_condition_7_enable": True,
+        "buy_condition_8_enable": False,
+        "buy_condition_9_enable": True,
+        "buy_dip_threshold_1": 0.048,
+        "buy_dip_threshold_10": 0.13,
+        "buy_dip_threshold_11": 0.105,
+        "buy_dip_threshold_12": 0.412,
+        "buy_dip_threshold_2": 0.112,
+        "buy_dip_threshold_3": 0.378,
+        "buy_dip_threshold_4": 0.48,
+        "buy_dip_threshold_5": 0.044,
+        "buy_dip_threshold_6": 0.037,
+        "buy_dip_threshold_7": 0.325,
+        "buy_dip_threshold_8": 0.476,
+        "buy_dip_threshold_9": 0.045,
+        "buy_ema_open_mult_14": 0.026,
+        "buy_ema_open_mult_15": 0.024,
+        "buy_ema_open_mult_5": 0.02,
+        "buy_ema_open_mult_6": 0.03,
+        "buy_ema_open_mult_7": 0.032,
+        "buy_ema_rel_15": 0.997,
+        "buy_ema_rel_3": 0.98,
+        "buy_ema_rel_5": 0.998,
+        "buy_ema_rel_7": 0.979,
+        "buy_ewo_12": 3.8,
+        "buy_ewo_13": -13.5,
+        "buy_ewo_16": 7.8,
+        "buy_ewo_17": -14.4,
+        "buy_ma_offset_10": 0.945,
+        "buy_ma_offset_11": 0.985,
+        "buy_ma_offset_12": 0.961,
+        "buy_ma_offset_13": 0.971,
+        "buy_ma_offset_14": 0.981,
+        "buy_ma_offset_15": 0.971,
+        "buy_ma_offset_16": 0.935,
+        "buy_ma_offset_17": 0.955,
+        "buy_ma_offset_9": 0.971,
+        "buy_mfi_1": 37.8,
+        "buy_mfi_11": 53.9,
+        "buy_mfi_2": 42.6,
+        "buy_mfi_9": 51.5,
+        "buy_min_inc_1": 0.039,
+        "buy_min_inc_11": 0.013,
+        "buy_pump_pull_threshold_1": 1.81,
+        "buy_pump_pull_threshold_2": 2.39,
+        "buy_pump_pull_threshold_3": 2.6,
+        "buy_pump_pull_threshold_4": 2.7,
+        "buy_pump_pull_threshold_5": 2.77,
+        "buy_pump_pull_threshold_6": 2.21,
+        "buy_pump_pull_threshold_7": 2.17,
+        "buy_pump_pull_threshold_8": 2.88,
+        "buy_pump_pull_threshold_9": 2.71,
+        "buy_pump_threshold_1": 0.968,
+        "buy_pump_threshold_2": 0.405,
+        "buy_pump_threshold_3": 0.82,
+        "buy_pump_threshold_4": 0.978,
+        "buy_pump_threshold_5": 0.683,
+        "buy_pump_threshold_6": 0.754,
+        "buy_pump_threshold_7": 0.42,
+        "buy_pump_threshold_8": 0.469,
+        "buy_pump_threshold_9": 1.592,
+        "buy_rsi_1": 37.8,
+        "buy_rsi_11": 47.7,
+        "buy_rsi_12": 38.2,
+        "buy_rsi_15": 48.4,
+        "buy_rsi_16": 26.3,
+        "buy_rsi_18": 22.0,
+        "buy_rsi_1h_10": 20.0,
+        "buy_rsi_1h_20": 21.7,
+        "buy_rsi_1h_21": 37.8,
+        "buy_rsi_1h_diff_2": 43.1,
+        "buy_rsi_1h_max_1": 84.6,
+        "buy_rsi_1h_max_11": 85.6,
+        "buy_rsi_1h_max_2": 90.3,
+        "buy_rsi_1h_max_9": 79.0,
+        "buy_rsi_1h_min_1": 39.4,
+        "buy_rsi_1h_min_11": 45.7,
+        "buy_rsi_1h_min_19": 57.4,
+        "buy_rsi_1h_min_2": 37.2,
+        "buy_rsi_1h_min_9": 39.5,
+        "buy_rsi_20": 28.5,
+        "buy_rsi_21": 17.8,
+        "buy_rsi_7": 39.5,
+        "buy_rsi_8": 39.6,
+        "buy_tail_diff_8": 5.7,
+        "buy_volume_10": 5.6,
+        "buy_volume_12": 4.5,
+        "buy_volume_13": 2.3,
+        "buy_volume_14": 7.4,
+        "buy_volume_15": 7.1,
+        "buy_volume_16": 7.0,
+        "buy_volume_17": 3.4,
+        "buy_volume_18": 1.4,
+        "buy_volume_2": 4.1,
+        "buy_volume_20": 5.2,
+        "buy_volume_21": 3.9,
+        "buy_volume_7": 1.1,
+        "buy_volume_8": 3.8,
+        "buy_volume_9": 3.95,
+        "ewo_high": 6.899,
+        "ewo_low": -15.271,
+        "fast_ewo": 46,
+        "low_offset_ema": 0.968,
+        "low_offset_kama": 0.934,
+        "low_offset_sma": 0.969,
+        "low_offset_t3": 0.938,
+        "low_offset_trima": 0.973,
+        "slow_ewo": 157,
     }
 
     # Multi Offset
     base_nb_candles_buy = IntParameter(
-        5, 80, default=20, load=True, space='buy', optimize=True)
-    base_nb_candles_sell = IntParameter(
-        5, 80, default=20, load=True, space='sell', optimize=True)
+        5, 80, default=buy_params["base_nb_candles_buy"], load=True, space='buy', optimize=True)
     low_offset_sma = DecimalParameter(
-        0.9, 0.99, default=0.958, load=True, space='buy', optimize=True)
-    high_offset_sma = DecimalParameter(
-        0.99, 1.1, default=1.012, load=True, space='sell', optimize=True)
+        0.9, 0.99, default=buy_params["low_offset_sma"], load=True, space='buy', optimize=True)
     low_offset_ema = DecimalParameter(
         0.9, 0.99, default=0.958, load=True, space='buy', optimize=True)
-    high_offset_ema = DecimalParameter(
-        0.99, 1.1, default=1.012, load=True, space='sell', optimize=True)
     low_offset_trima = DecimalParameter(
         0.9, 0.99, default=0.958, load=True, space='buy', optimize=True)
-    high_offset_trima = DecimalParameter(
-        0.99, 1.1, default=1.012, load=True, space='sell', optimize=True)
     low_offset_t3 = DecimalParameter(
         0.9, 0.99, default=0.958, load=True, space='buy', optimize=True)
-    high_offset_t3 = DecimalParameter(
-        0.99, 1.1, default=1.012, load=True, space='sell', optimize=True)
     low_offset_kama = DecimalParameter(
         0.9, 0.99, default=0.958, load=True, space='buy', optimize=True)
-    high_offset_kama = DecimalParameter(
-        0.99, 1.1, default=1.012, load=True, space='sell', optimize=True)
 
     # Protection
     ewo_low = DecimalParameter(
@@ -102,27 +207,22 @@ class NFI5MO(IStrategy):
     ma_map = {
         'sma': {
             'low_offset': low_offset_sma.value,
-            'high_offset': high_offset_sma.value,
             'calculate': ta.SMA
         },
         'ema': {
             'low_offset': low_offset_ema.value,
-            'high_offset': high_offset_ema.value,
             'calculate': ta.EMA
         },
         'trima': {
             'low_offset': low_offset_trima.value,
-            'high_offset': high_offset_trima.value,
             'calculate': ta.TRIMA
         },
         't3': {
             'low_offset': low_offset_t3.value,
-            'high_offset': high_offset_t3.value,
             'calculate': ta.T3
         },
         'kama': {
             'low_offset': low_offset_kama.value,
-            'high_offset': high_offset_kama.value,
             'calculate': ta.KAMA
         }
     }
@@ -573,9 +673,6 @@ class NFI5MO(IStrategy):
             dataframe[f'{i}_offset_buy'] = self.ma_map[f'{i}']['calculate'](
                 dataframe, self.base_nb_candles_buy.value) * \
                 self.ma_map[f'{i}']['low_offset']
-            dataframe[f'{i}_offset_sell'] = self.ma_map[f'{i}']['calculate'](
-                dataframe, self.base_nb_candles_sell.value) * \
-                self.ma_map[f'{i}']['high_offset']
 
         return dataframe
 
