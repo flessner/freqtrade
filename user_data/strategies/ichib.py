@@ -17,29 +17,30 @@ pd.options.mode.chained_assignment = None
 # ichiV1 - f(ast) variant of the original ichi strategy
 # source: https://github.com/PeetCrypto/freqtrade-stuff/blob/main/IchisV1.py
 
-leverage = 1
+leverage = 10
 
 
 class IchiB(IStrategy):
 
     # Buy hyperspace params:
     buy_params = {
-        "buy_fan_magnitude_shift_value": 2,
-        "buy_min_fan_magnitude_gain": 1.00355,
-        "buy_trend_above_senkou_level": 1,
-        "buy_trend_bullish_level": 7,
+        "buy_fan_magnitude_shift_value": 5,
+        "buy_min_fan_magnitude_gain": 1.00509,
+        "buy_trend_above_senkou_level": 5,
+        "buy_trend_bullish_level": 2,
     }
 
     # ROI table:
     minimal_roi = {
         "0": 0.04 * leverage,
-        "10": 0.025 * leverage,
-        "25": 0.01 * leverage,
-        "50": 0,
+        "30": 0.03 * leverage,
+        "60": 0.02 * leverage,
+        "90": 0.01 * leverage,
+        "120": 0,
     }
 
     # Stoploss:
-    stoploss = -0.0125 * leverage
+    stoploss = -0.003 * leverage
 
     # Optimal timeframe for the strategy
     timeframe = "5m"
