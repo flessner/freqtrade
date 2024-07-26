@@ -30,11 +30,6 @@ class IchiT(IStrategy):
         "buy_trend_bullish_level": 1,
     }
 
-    # Sell hyperspace params:
-    sell_params = {
-        "sell_trend_indicator": "trend_close_15m",
-    }
-
     # ROI table:
     minimal_roi = {
         "0": 0.04 * leverage,
@@ -86,21 +81,6 @@ class IchiT(IStrategy):
         default=buy_params["buy_min_fan_magnitude_gain"],
         decimals=5,
         space="buy",
-        optimize=True,
-    )
-
-    sell_trend_indicator = CategoricalParameter(
-        [
-            "trend_close_15m",
-            "trend_close_30m",
-            "trend_close_1h",
-            "trend_close_2h",
-            "trend_close_4h",
-            "trend_close_6h",
-            "trend_close_8h",
-        ],
-        default=sell_params["sell_trend_indicator"],
-        space="sell",
         optimize=True,
     )
 

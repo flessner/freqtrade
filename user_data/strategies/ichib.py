@@ -17,10 +17,10 @@ pd.options.mode.chained_assignment = None
 # ichiV1 - f(ast) variant of the original ichi strategy
 # source: https://github.com/PeetCrypto/freqtrade-stuff/blob/main/IchisV1.py
 
-leverage = 5
+leverage = 1
 
 
-class IchiY(IStrategy):
+class IchiB(IStrategy):
 
     # Buy hyperspace params:
     buy_params = {
