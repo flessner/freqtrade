@@ -17,7 +17,7 @@ pd.options.mode.chained_assignment = None
 # ichiV1 - f(ast) variant of the original ichi strategy
 # source: https://github.com/PeetCrypto/freqtrade-stuff/blob/main/IchisV1.py
 
-leverage = 5
+leverage = 10
 
 
 class IchiT(IStrategy):
@@ -40,7 +40,7 @@ class IchiT(IStrategy):
         "0": 0.04 * leverage,
         "10": 0.025 * leverage,
         "25": 0.01 * leverage,
-        "50": 0
+        "50": 0,
     }
 
     # Stoploss:
@@ -240,6 +240,6 @@ class IchiT(IStrategy):
             dataframe.loc[reduce(lambda x, y: x & y, conditions), "buy"] = 1
 
         return dataframe
-    
+
     def populate_exit_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
         return dataframe
