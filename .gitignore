@@ -13,3 +13,4 @@
 /user_data/*.sqlite
 /user_data/*.sqlite-shm
 /user_data/*.sqlite-wal
+/user_data/hyperopt.lock
