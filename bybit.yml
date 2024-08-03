@@ -17,12 +17,3 @@ services:
     mem_limit: 1G
     command: >
       trade --logfile /freqtrade/user_data/logs/quark.log --db-url sqlite:////freqtrade/user_data/quark.sqlite -c /freqtrade/user_data/quark.json --strategy IchiY
-  mini:
-    image: freqtradeorg/freqtrade:stable
-    restart: unless-stopped
-    volumes:
-      - "./user_data:/freqtrade/user_data"
-    deploy:
-    mem_limit: 1G
-    command: >
-      trade --logfile /freqtrade/user_data/logs/mini.log --db-url sqlite:////freqtrade/user_data/mini.sqlite -c /freqtrade/user_data/mini.json --strategy IchiB
