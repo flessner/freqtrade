@@ -39,7 +39,7 @@ class IchiT(IStrategy):
     }
 
     # Stoploss:
-    stoploss = -0.0125 * leverage
+    stoploss = -0.015 * leverage
 
     # Optimal timeframe for the strategy
     timeframe = "5m"

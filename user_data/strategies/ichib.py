@@ -40,7 +40,7 @@ class IchiB(IStrategy):
     }
 
     # Stoploss:
-    stoploss = -0.003 * leverage
+    stoploss = -0.01 * leverage
 
     # Optimal timeframe for the strategy
     timeframe = "5m"
