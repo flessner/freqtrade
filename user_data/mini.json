@@ -32,7 +32,7 @@
     "force_entry": "market",
     "force_exit": "market",
     "stoploss": "market",
-    "stoploss_on_exchange": false,
+    "stoploss_on_exchange": true,
     "stoploss_on_exchange_interval": 60
   },
   "exchange": {
