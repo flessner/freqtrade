@@ -22,7 +22,6 @@ class SMAO2(IStrategy):
     startup_candle_count = 200
 
     def informative_pairs(self):
-
         pairs = self.dp.current_whitelist()
         informative_pairs = [(pair, self.informative_timeframe) for pair in pairs]
 
@@ -30,7 +29,6 @@ class SMAO2(IStrategy):
 
     @staticmethod
     def get_informative_indicators(dataframe: DataFrame, metadata: dict):
-
         dataframe["ema_fast"] = ta.EMA(dataframe, timeperiod=20)
         dataframe["ema_slow"] = ta.EMA(dataframe, timeperiod=25)
 
